@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dev-concept"
+  },
+  "targets": {
+    "dev-concept": {
+      "hosting": {
+        "DevConcept": [
+          "dev-concept"
+        ]
+      }
+    }
+  }
+}
