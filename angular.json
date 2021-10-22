@@ -98,6 +98,7 @@
             ],
             "scripts": []
           }
+<<<<<<< HEAD
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
@@ -108,9 +109,15 @@
             "firebaseProject": "dev-concept",
             "firebaseHostingSite": "dev-concept"
           }
+=======
+>>>>>>> main
         }
       }
     }
   },
   "defaultProject": "DevConcept"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
