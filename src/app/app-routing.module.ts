@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { EmailComponentComponent } from './components/email-component/email-component.component';
@@ -19,12 +19,6 @@ const routes: Routes = [
   { path: 'signup', component: SignUppageComponent },
   { path: 'profile', component: ProfileComponentComponent }
 ];
-=======
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
->>>>>>> main
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

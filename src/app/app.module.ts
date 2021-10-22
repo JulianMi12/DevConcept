@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,19 +44,6 @@ const app = initializeApp(firebaseConfig);
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule
-=======
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
->>>>>>> main
   ],
   providers: [],
   bootstrap: [AppComponent]
