@@ -1,1 +1,99 @@
-<p>tracking works!</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<div class="body">
+    <div id="sidemenu" class="menu-collapsed">
+
+        <div id="header">
+            <div id="title"><img src="../../../assets/images/Logo.png" id="icon" alt=""></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+
+        <div id="profile">
+            <div id="photo"><img src="../../../assets/images/user.png" alt=""></div>
+
+            <div id="name"><span>soporte.dev</span></div>
+        </div>
+
+        <div id="menu-items">
+            <div class="item">
+                <a routerLink="/companies">
+                    <div class="icon"><img src="../../../assets/images/company.png" alt=""></div>
+                    <div class="title"><span>Company</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a routerLink="/service">
+                    <div class="icon"><img src="../../../assets/images/services.png" alt=""></div>
+                    <div class="title"><span>Services</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a routerLink="/tracking">
+                    <div class="icon"><img src="../../../assets/images/tracking.png" alt=""></div>
+                    <div class="title"><span>Tracking</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a routerLink="/login">
+                    <div class="icon"><img src="../../../assets/images/logout.png" alt=""></div>
+                    <div class="title"><span>Log Out</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container1">
+        <div class="content1">
+            <div class="container mt-4">
+                <header>
+                    <div id="cont-title">
+                        <h1><b>TRACKING</b></h1>
+                    </div>
+                </header>
+                <div class="nuevo">
+                    <input type="submit" routerLink="/new-tracking" class="fadeIn fourth" value="New">
+                </div>
+                <div class="body-form">
+                    <div class="container">
+                        <div class="row">
+                            <table class="table table-hover n">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Company</th>
+                                        <th scope="col">Service</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-pri">
+                                        <th scope="row">Admin</th>
+                                        <td>Enel</td>
+                                        <td>Luz</td>
+                                        <td>10/10/2021</td>
+                                        <td>C</td>
+                                    </tr>
+                                    <tr class="table-secondary">
+                                        <th scope="row">Admin</th>
+                                        <td>Claro</td>
+                                        <td>Proveedor de Internet</td>
+                                        <td>20/08/2021</td>
+                                        <td>U</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
