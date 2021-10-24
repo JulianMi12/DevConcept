@@ -1,0 +1,29 @@
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.copyright_area {
+    background: #50CCAC;
+    padding: 10px 0;
+    margin-top: 1rem;
+}
+
+.copyright_area .copyright_text {
+    text-align: center;
+}
+
+.copyright_area .copyright_text p {
+    color: #fff;
+}
+
+.copyright_area .copyright_text p span {
+    color: #feb000;
+}

@@ -1,0 +1,29 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+    <div class="imgs">
+        <img src="../../../assets/images/Logo.png" id="icon" alt="User Icon" />
+    </div>
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <h1>LOGIN</h1>
+
+        <!-- Login Form -->
+        <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
+            <input type="text" placeholder="Email address" (ngModel)="email" name="email" class="fadeIn second" required>
+            <input type="password" placeholder="Password" (ngModel)="password" name="password" class="fadeIn second" required>
+            <input type="submit" [disabled]="!formData.valid" class="fadeIn fourth" value="Sign In">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a routerLink="/login" routerLinkActive="active" class="create-account-txt">Back</a>
+        </div>
+
+    </div>
+</div>
