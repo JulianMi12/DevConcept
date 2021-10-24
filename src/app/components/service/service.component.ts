@@ -10,7 +10,9 @@ import { CargarScriptsService } from 'app/services/cargar-scripts.service';
 })
 export class ServiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _CargaScripts: CargarScriptsService, public authService: AuthService) {
+    _CargaScripts.Carga(["navbar"]);
+   }
 
   ngOnInit(): void {
   }
