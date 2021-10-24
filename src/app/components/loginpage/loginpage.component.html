@@ -14,15 +14,14 @@
         <h1>LOGIN</h1>
 
         <!-- Login Form -->
-        <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
-            <input type="text" placeholder="Email address" (ngModel)="email" name="email" class="fadeIn second" required>
-            <input type="password" placeholder="Password" (ngModel)="password" name="password" class="fadeIn second" required>
-            <input type="submit" [disabled]="!formData.valid" class="fadeIn fourth" value="Sign In">
+        <form>
+            <input type="submit" (click)="loginGoogle()" class="fadeIn fourth" value="Login with Google">
+            <input type="submit" routerLink="/email-login" class="fadeIn fourth" value="Login with Email">
         </form>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a routerLink="/login" routerLinkActive="active" class="create-account-txt">Back</a>
+            <a routerLink="/signup" routerLinkActive="active" class="create-account-txt">Create an Account</a>
         </div>
 
     </div>

@@ -1,5 +1,4 @@
 export const environment = {
-<<<<<<< HEAD
   firebase: {
     projectId: 'dev-concept',
     appId: '1:4526513728:web:58079ea2ebaf50e48149a5',
@@ -10,7 +9,5 @@ export const environment = {
     authDomain: 'dev-concept.firebaseapp.com',
     messagingSenderId: '4526513728',
   },
-=======
->>>>>>> main
   production: true
 };
