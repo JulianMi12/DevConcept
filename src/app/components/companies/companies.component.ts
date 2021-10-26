@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'app/services/auth.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { CargarScriptsService } from 'app/services/cargar-scripts.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-companies',
@@ -9,8 +10,11 @@ import { CargarScriptsService } from 'app/services/cargar-scripts.service';
 })
 export class CompaniesComponent implements OnInit {
 
-  constructor(private _CargaScripts: CargarScriptsService, public authService: AuthService) {
+  companies: Observable<any[]> | any;
+
+  constructor(private _CargaScripts: CargarScriptsService, public firestore: AngularFirestore) {
     _CargaScripts.Carga(["navbar"]);
+    this.companies = firestore.collection('companies').valueChanges();
    }
 
   ngOnInit(): void {
