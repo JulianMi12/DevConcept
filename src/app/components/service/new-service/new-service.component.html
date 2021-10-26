@@ -6,21 +6,25 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h3>Add Service</h3>
-                    <form id="formContent">
+                    <span style="color: black;" *ngIf="enviado && createService.invalid && createAudit.invalid"> </span>
+                    <form action="" id="formContent" [formGroup]="createService" (ngSubmit)="agregarService()">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="ID">
+                                <input type="text" class="form-control" formControlName="id" placeholder="id">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="NAME">
+                                <input type="text" class="form-control" formControlName="NIT" placeholder="NIT">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="STAR DATE">
+                                <input type="text" class="form-control" formControlName="name" placeholder="name">
                             </div>
-                            <div class="mt-3">
-                                <input type="submit" class="fadeIn fourth" routerLink="/service" value="Cancel">
-                                <input type="submit" class="fadeIn fourth" routerLink="/service" value="Save">
+                            <div class="col">
+                                <input type="text" class="form-control" formControlName="date" placeholder="date">
                             </div>
+                        </div>
+                        <div class="mt-3">
+                            <input type="submit" class="fadeIn fourth" routerLink="/service" value="Cancel">
+                            <input type="submit" class="fadeIn fourth" value="Save">
                         </div>
                     </form>
                 </div>

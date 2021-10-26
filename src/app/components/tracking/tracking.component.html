@@ -71,20 +71,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-pri">
-                                        <th scope="row">Admin</th>
-                                        <td>Enel</td>
-                                        <td>Luz</td>
-                                        <td>10/10/2021</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr class="table-secondary">
-                                        <th scope="row">Admin</th>
-                                        <td>Claro</td>
-                                        <td>Proveedor de Internet</td>
-                                        <td>20/08/2021</td>
-                                        <td>U</td>
-                                    </tr>
+                                    <tr class="table-pri" *ngFor="let item of audits | async">
+                                        <td>
+                                            {{item.user}}
+                                        </td>
+                                        <td>
+                                            {{item.company}}
+                                        </td>
+                                        <td>
+                                            {{item.service}}
+                                        </td>
+                                        <td>
+                                            {{item.date}}
+                                        </td>
+                                        <td>
+                                            {{item.action}}
+                                        </td>
+
                                 </tbody>
                             </table>
                         </div>
