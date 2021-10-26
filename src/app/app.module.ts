@@ -19,8 +19,6 @@ import { ServiceComponent } from './components/service/service.component';
 import { NewServiceComponent } from './components/service/new-service/new-service.component';
 import { UpdateServiceComponent } from './components/service/update-service/update-service.component';
 import { TrackingComponent } from './components/tracking/tracking.component';
-import { NewTrackingComponent } from './components/tracking/new-tracking/new-tracking.component';
-import { UpdateTrackingComponent } from './components/tracking/update-tracking/update-tracking.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBxxj4wm3qaZtUg2iPIGDm24LMoED0oXys',
@@ -46,9 +44,7 @@ const firebaseConfig = {
     ServiceComponent,
     NewServiceComponent,
     UpdateServiceComponent,
-    TrackingComponent,
-    NewTrackingComponent,
-    UpdateTrackingComponent
+    TrackingComponent
   ],
   imports: [
     BrowserModule,
