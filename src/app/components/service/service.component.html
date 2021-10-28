@@ -36,7 +36,7 @@
             <div class="item">
                 <a routerLink="/tracking">
                     <div class="icon"><img src="../../../assets/images/tracking.png" alt=""></div>
-                    <div class="title"><span>Tracking</span></div>
+                    <div class="title"><span>Audit</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
@@ -66,27 +66,28 @@
                             <table class="table table-hover n">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">id</th>
+                                        <th scope="col">NIT</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Star date</th>
-                                        <th scope="col">End date</th>
+                                        <th scope="col">Start date</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-pri">
-                                        <th scope="row">1001</th>
-                                        <td>Vigilacia</td>
-                                        <td>10/11/2020</td>
-                                        <td>10/11/2021</td>
-                                        <td class="f"><a routerLink="/update-service"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
-                                    </tr>
-                                    <tr class="table-secondary">
-                                        <th scope="row">1002</th>
-                                        <td>Aseo</td>
-                                        <td>20/08/2019</td>
-                                        <td>20/08/2022</td>
-                                        <td class="f"><a routerLink="/update-service"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
+                                    <tr class="table-pri" *ngFor="let item of services | async">
+                                        <th scope="row">
+                                            {{item.id}}
+                                        </th>
+                                        <th scope="row">
+                                            {{item.NIT}}
+                                        </th>
+                                        <td>
+                                            {{item.name}}
+                                        </td>
+                                        <td>
+                                            {{item.date}}
+                                        </td>
+                                        <td class="f"><a routerLink="/update-service"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/service"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -36,7 +36,7 @@
             <div class="item">
                 <a routerLink="/tracking">
                     <div class="icon"><img src="../../../assets/images/tracking.png" alt=""></div>
-                    <div class="title"><span>Tracking</span></div>
+                    <div class="title"><span>Audit</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
@@ -73,34 +73,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-pri">
-                                        <th scope="row">1234</th>
-                                        <td>Giitic SAS</td>
-                                        <td>$4.500.000</td>
-                                        <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
-                                    </tr>
-                                    <tr class="table-secondary">
-                                        <th scope="row">2543</th>
-                                        <td>Acueducto</td>
-                                        <td>$235.000</td>
-                                        <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
-                                    </tr>
-                                    <tr class="table-pri">
-                                        <th scope="row">35867</th>
-                                        <td>Claro</td>
-                                        <td>$150.000</td>
-                                        <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
-                                    </tr>
-                                    <tr class="table-secondary">
-                                        <th scope="row">4312</th>
-                                        <td>Enel</td>
-                                        <td>$480.000</td>
-                                        <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
-                                    </tr>
-                                    <tr class="table-pri">
-                                        <th scope="row">55234</th>
-                                        <td>Seguridad Privada</td>
-                                        <td>$1.280.000</td>
+                                    <tr class="table-pri" *ngFor="let item of companies | async">
+                                        <th scope="row">
+                                            {{item.NIT}}
+                                        </th>
+                                        <td>
+                                            {{item.name}}
+                                        </td>
+                                        <td>
+                                            ${{item.total}}
+                                        </td>
                                         <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
                                     </tr>
                                 </tbody>
