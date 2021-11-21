@@ -14,10 +14,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { CargarScriptsService } from './services/cargar-scripts.service';
 import { CompaniesComponent } from './components/companies/companies.component';
 import { NewCompanyComponent } from './components/companies/new-company/new-company.component';
-import { UpdateComponentComponent } from './components/companies/update-component/update-component.component';
 import { ServiceComponent } from './components/service/service.component';
 import { NewServiceComponent } from './components/service/new-service/new-service.component';
-import { UpdateServiceComponent } from './components/service/update-service/update-service.component';
 import { TrackingComponent } from './components/tracking/tracking.component';
 
 const firebaseConfig = {
@@ -40,10 +38,8 @@ const firebaseConfig = {
     FooterComponent,
     CompaniesComponent,
     NewCompanyComponent,
-    UpdateComponentComponent,
     ServiceComponent,
     NewServiceComponent,
-    UpdateServiceComponent,
     TrackingComponent
   ],
   imports: [

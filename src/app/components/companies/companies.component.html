@@ -73,7 +73,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-pri" *ngFor="let item of companies | async">
+                                    <tr class="table-pri" *ngFor="let item of companies">
                                         <th scope="row">
                                             {{item.NIT}}
                                         </th>
@@ -83,7 +83,7 @@
                                         <td>
                                             ${{item.total}}
                                         </td>
-                                        <td class="f"><a routerLink="/update-company"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a routerLink="/companies"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
+                                        <td class="f"><a [routerLink]="['/update/', item.id]"><i class="far fa-edit"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a (click)="eliminarCompany(item.id)"><i class="far fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;</td>
                                     </tr>
                                 </tbody>
                             </table>
