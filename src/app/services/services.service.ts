@@ -11,4 +11,18 @@ export class ServicesService {
   agregarService(service: any): Promise<any>{
     return this.firestore.collection('services').add(service);
   }
+  eliminarService(id: string): Promise<any>{
+    return this.firestore.collection('services').doc(id).delete();
+  }
+
+  getService(id: string): Observable<any> {
+    return this.firestore.collection('services').doc(id).snapshotChanges();
+  }
+  getService(): Observable<any> {
+    return this.firestore.collection('services').snapshotChanges();
+  }
+
+  updateService(id: string, data:any): Promise<any>{
+    return this.firestore.collection('services').doc(id).update(data);
+  }
 }
