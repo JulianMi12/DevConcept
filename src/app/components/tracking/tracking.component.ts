@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AuditService } from 'app/services/audit.service'
-import { ServicesService } from 'app/services/services.service'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tracking',
@@ -11,13 +11,14 @@ import { ServicesService } from 'app/services/services.service'
 })
 export class TrackingComponent implements OnInit {
 
-  audits: Observable<any[]> | any;
+  audits: Observable<any[]> | any
   ids: string | null
+  createAudit: FormGroup
+  titulo: string = 'Update Audit'
 
   constructor(
     private fb: FormBuilder,
     private auditService: AuditService,
-    private companyService: CompanyService,
     private router: Router,
     private aRoute: ActivatedRoute,
   ) {
@@ -30,20 +31,25 @@ export class TrackingComponent implements OnInit {
       action: ['', Validators.required],
     })
 
-    this.id = this.aRoute.snapshot.paramMap.get('id')
+    this.ids = this.aRoute.snapshot.paramMap.get('id')
   }
 
 
   ngOnInit(): void {
   }
+
   agregarTracking(){
+
+    if (this.createAudit.invalid) {
+      return
+    }
     const audit: any = {
-        user: "soporte.dev",
-        company: this.createService.value.NIT,
-        service: this.createService.value.id,
-        date: new Date().toISOString().slice(0, 10),
-        action: 'U',
-      }
+      user: "soporte.dev",
+      company: this.createAudit.value.NIT,
+      service: this.createAudit.value.id,
+      date: new Date().toISOString().slice(0, 10),
+      action: 'U',
+    }
       this.auditService
         .agregarAudit(audit)
         .then(() => {
@@ -51,20 +57,17 @@ export class TrackingComponent implements OnInit {
         })
         .catch((error) => {
           console.log(error)
-        })
-    };
+        });
     this.router.navigate(['Audit']);
-
   }
 
     edit() {
     if (this.ids !== null) {
-      this.titulo = 'Update Audit'
-      this.auditService.getAudit().subscribe((data) => {
+      this.auditService.getAudit(this.ids).subscribe((data) => {
         this.createAudit.setValue({
           user: "soporte.dev",
-          company: this.createService.value.NIT,
-          service: this.createService.value.id,
+          company: this.createAudit.value.NIT,
+          service: this.createAudit.value.id,
           date: new Date().toISOString().slice(0, 10),
           action: 'U',
         })

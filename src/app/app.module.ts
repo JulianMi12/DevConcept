@@ -17,6 +17,7 @@ import { NewCompanyComponent } from './components/companies/new-company/new-comp
 import { ServiceComponent } from './components/service/service.component';
 import { NewServiceComponent } from './components/service/new-service/new-service.component';
 import { TrackingComponent } from './components/tracking/tracking.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBxxj4wm3qaZtUg2iPIGDm24LMoED0oXys',
@@ -48,7 +49,8 @@ const firebaseConfig = {
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EditorModule
   ],
   providers: [
     CargarScriptsService
